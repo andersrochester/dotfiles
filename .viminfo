@@ -8,7 +8,7 @@
 # hlsearch on (H) or off (h):
 ~h
 # Last Search Pattern:
-~MSle0~/funger
+~MSle0~/colo
 
 # Last Substitute Search Pattern:
 ~MSle0&60px
@@ -18,21 +18,33 @@ $
 
 # Command Line History (newest to oldest):
 :x
-:q!
+:w ~/.myscripts/dotbkp
 :q
-:NERDTree
-:tabclose
+:e ~/.myscripts/notes
 :w
-:NERDTreeToggle
-:!notes
-:source ~/.vimrc
-:PluginI
 :bd
+:colo jellybeans
+:colorscheme
+:X
+:source ~/.vimrc
+:tabclose
+:.
+:tabclose all
+:q!
+::
+:ttb,min:1,max:30,results:30'
+:PluginInstall
+:e ~/.vim/plugins.vim
+:x:
+:!notes
+:rr
+:map
+:NERDTree
+:NERDTreeToggle
+:PluginI
 :w!
 :colo
 :colo atom-dark
-:PluginInstall
-:e ~/.vim/plugins.vim
 :-
 :e .
 :e! ~/.vim/plugins.vim
@@ -45,20 +57,9 @@ $
 :1,9d
 :4,13w ~/.vim/plugins.vim
 :colorscheme atom-dark
-:colorscheme badwolf
-:v
-:! ls
-:e ls
-:!cd Documents/vim-practice/
-:b2
-:b1
-:1
-:ls
-:bf
-:bf 1
-:vsp
 
 # Search String History (newest to oldest):
+?/colo
 ? @$
 ?/funger
 ??\a
@@ -98,7 +99,6 @@ $
 ?/color
 ?/solid
 ?/entry
-? öcolor
 
 # Expression History (newest to oldest):
 
@@ -108,163 +108,200 @@ $
 
 # Registers:
 "0	LINE	0
-	"----- set expandtab
-"1	LINE	0
-	../
+	# 
+""1	LINE	0
+	        DATE=`date +%y-%m-%d`
+	
+	        TITLE=~/Documents/texter/'notes'_$DATE.txt
+	
+	        vim $TITLE
 "2	LINE	0
-	./
+	../
 "3	LINE	0
-	
+	./
 "4	LINE	0
-	../
+	
 "5	LINE	0
-	./
-"6	LINE	0
-	
-"7	LINE	0
 	../
-"8	LINE	0
+"6	LINE	0
 	./
-"9	LINE	0
+"7	LINE	0
 	
-""-	CHAR	0
-	 
+"8	LINE	0
+	../
+"9	LINE	0
+	./
+"-	CHAR	0
+	. 
 
 # File marks:
-'0  6  32  ~/Documents/texter/notes_17-09-24.txt
-'1  36  0  ~/Sites/sandra/NERD_tree_2
-'2  1  0  ~/Sites/sandra/package.json
-'3  1  0  ~/Sites/sandra/routes/web.php
-'4  1  0  ~/Documents/vim-practice/tsting
-'5  34  3  ~/Documents/texter/notes_17-09-22.txt
-'6  1  0  ~/testing
-'7  1  0  ~/Sites/sandra/server.php
-'8  21  5  ~/.vimrc
-'9  8  0  ~/Documents/vim-practice/tester4.txt
+'0  1  0  ~/Documents/texter/notes_17-09-24.txt
+'1  9  3  ~/.myscripts/notes
+'2  1  0  ~/.myscripts/note
+'3  7  17  ~/.myscripts/notes
+'4  9  0  ~/Documents/texter/notes_17-09-24.txt
+'5  15  21  ~/.vimrc
+'6  1  0  ~/inbjudan2.pages
+'8  1  3  ~/test.php
+'9  1  0  ~/.vim/plugins.vim
 
 # Jumplist (newest first):
--'  6  32  ~/Documents/texter/notes_17-09-24.txt
 -'  1  0  ~/Documents/texter/notes_17-09-24.txt
--'  15  0  ~/Sites/sandra/NERD_tree_2
--'  22  2  ~/Sites/sandra/NERD_tree_2
--'  1  0  ~/Sites/sandra/NERD_tree_2
--'  1  0  ~/Sites/sandra/bootstrap/app.php
--'  14  1  ~/Sites/sandra/NERD_tree_1
--'  30  2  ~/Sites/sandra/NERD_tree_1
--'  1  3  ~/Sites/sandra/NERD_tree_1
--'  1  0  ~/Sites/sandra/package.json
--'  2  0  ~/Sites/sandra/database
--'  2  0  ~/Sites/sandra/database/migrations
--'  1  0  ~/Sites/sandra/database/migrations
--'  15  4  ~/Sites/sandra/database/migrations/2014_10_12_100000_create_password_resets_table.php
--'  1  0  ~/Sites/sandra/database/migrations/2014_10_12_100000_create_password_resets_table.php
--'  4  0  ~/Sites
--'  1  0  ~/Sites/sandra/.env
--'  2  0  ~/Sites/sandra/app
--'  1  0  ~/Sites/sandra/app/Exceptions
--'  53  0  ~/Sites/sandra/app/Exceptions/Handler.php
--'  1  0  ~/Sites/sandra/app/Exceptions/Handler.php
--'  1  0  ~/Sites/sandra/routes/web.php
--'  1  0  ~/Documents/vim-practice/tsting
--'  34  3  ~/Documents/texter/notes_17-09-22.txt
--'  28  3  ~/Documents/texter/notes_17-09-22.txt
--'  1  0  ~/Documents/texter/notes_17-09-22.txt
--'  1  0  ~/testing
--'  1  0  ~/Sites/sandra/server.php
--'  6  0  ~/test.php
--'  5  0  ~/test.php
--'  1  0  ~/test.php
--'  2  0  ~/test.php
--'  14  5  ~/.vimrc
--'  1  0  ~/.vimrc
--'  8  0  ~/Documents/vim-practice/tester4.txt
--'  1  0  ~/Documents/vim-practice/testing2.txt
--'  1  0  ~/Documents/vim-practice/testing.txt
--'  3  0  ~/Documents/vim-practice/testing.txt
--'  20  0  ~/.vimrc
--'  13  30  ~/.vimrc
--'  77  0  /private/etc/sudoers.tmp
--'  1  0  /private/etc/sudoers.tmp
--'  25  8  ~/Documents/texter/notes_17-09-22.txt
--'  6  49  ~/.myscripts/notes
+-'  9  3  ~/.myscripts/notes
 -'  1  0  ~/.myscripts/notes
--'  1  0  ~/Documents/texter/notes_17-09-22
--'  80  22  ~/Sites/wp-project/wp-config.php
--'  89  0  ~/Sites/wp-project/wp-config.php
--'  1  0  ~/Sites/wp-project/wp-config.php
--'  9  20  ~/Sites/sandra/resources/views/tasks/show.blade.php
--'  14  8  ~/Sites/sandra/resources/views/tasks/show.blade.php
--'  1  0  ~/Sites/sandra/resources/views/tasks/show.blade.php
--'  19  0  ~/Sites/sandra/routes/web.php
--'  25  37  ~/Documents/texter/notes_17-09-21
--'  1  0  ~/Documents/texter/notes_17-09-21
--'  1  0  ~/Sites/wp-kurs/wp-content/themes/twentyfifteen/index.php
--'  21  1  ~/Documents/texter/notes_17-09-21
--'  15  0  ~/Documents/texter/notes_17-09-21
--'  1  0  ~/Sites/sandra/database/migrations/2014_10_12_000000_create_users_table.php
--'  15  0  ~/Sites/sandra/routes/web.php
--'  82  34  ~/Sites/sandra/resources/views/welcome.blade.php
--'  1  0  ~/Sites/sandra/resources/views/welcome.blade.php
--'  13  18  ~/Sites/blog/.env
--'  1  0  ~/Sites/blog/.env
--'  19  22  ~/Documents/Laravel/projects/blog/routes/web.php
--'  1  0  ~/Documents/Laravel/projects/blog/routes/web.php
--'  2  17  ~/.bashrc
--'  1  0  ~/.bashrc
--'  1  0  ~/Documents/Wordpress/Sites/wp-kurs/wp-content/themes/aldebaran/index.php
--'  494  0  ~/Documents/Wordpress/Sites/wp-kurs/wp-content/themes/aldebaran/style.css
--'  115  23  ~/Documents/Wordpress/Sites/wp-kurs/wp-content/themes/aldebaran/style.css
--'  951  0  ~/Documents/Wordpress/Sites/wp-kurs/wp-content/themes/aldebaran/style.css
--'  943  24  ~/Documents/Wordpress/Sites/wp-kurs/wp-content/themes/aldebaran/style.css
--'  936  1  ~/Documents/Wordpress/Sites/wp-kurs/wp-content/themes/aldebaran/style.css
--'  941  1  ~/Documents/Wordpress/Sites/wp-kurs/wp-content/themes/aldebaran/style.css
--'  503  11  ~/Documents/Wordpress/Sites/wp-kurs/wp-content/themes/aldebaran/style.css
--'  932  39  ~/Documents/Wordpress/Sites/wp-kurs/wp-content/themes/aldebaran/style.css
--'  919  8  ~/Documents/Wordpress/Sites/wp-kurs/wp-content/themes/aldebaran/style.css
--'  910  8  ~/Documents/Wordpress/Sites/wp-kurs/wp-content/themes/aldebaran/style.css
--'  770  1  ~/Documents/Wordpress/Sites/wp-kurs/wp-content/themes/aldebaran/style.css
--'  622  1  ~/Documents/Wordpress/Sites/wp-kurs/wp-content/themes/aldebaran/style.css
--'  522  0  ~/Documents/Wordpress/Sites/wp-kurs/wp-content/themes/aldebaran/style.css
--'  414  1  ~/Documents/Wordpress/Sites/wp-kurs/wp-content/themes/aldebaran/style.css
--'  355  1  ~/Documents/Wordpress/Sites/wp-kurs/wp-content/themes/aldebaran/style.css
--'  343  41  ~/Documents/Wordpress/Sites/wp-kurs/wp-content/themes/aldebaran/style.css
--'  342  1  ~/Documents/Wordpress/Sites/wp-kurs/wp-content/themes/aldebaran/style.css
--'  1  0  ~/Sites/sandra/bootstrap/app.php
+-'  1  0  ~/.myscripts/note
+-'  7  17  ~/.myscripts/notes
+-'  9  0  ~/Documents/texter/notes_17-09-24.txt
+-'  6  1  ~/Documents/texter/notes_17-09-24.txt
+-'  15  21  ~/.vimrc
+-'  2  0  ~/.vimrc
 -'  1  0  ~/Sites/sandra/package.json
--'  2  0  ~/Sites/sandra/database
--'  2  0  ~/Sites/sandra/database/migrations
--'  1  0  ~/Sites/sandra/database/migrations
--'  15  0  ~/Sites/sandra/NERD_tree_2
--'  22  2  ~/Sites/sandra/NERD_tree_2
--'  1  0  ~/Sites/sandra/NERD_tree_2
+-'  21  0  ~/Sites/sandra/NERD_tree_1
+-'  25  2  ~/Sites/sandra/NERD_tree_1
+-'  1  0  ~/Sites/sandra/NERD_tree_1
+-'  1  0  ~/inbjudan2.pages
+-'  1  3  ~/test.php
+-'  1  0  ~/Sites/sandra/app/User.php
+-'  14  2  ~/Sites/sandra/NERD_tree_11
+-'  37  2  ~/Sites/sandra/NERD_tree_11
+-'  1  0  ~/Sites/sandra/NERD_tree_11
+-'  1  4  ~/Sites/sandra/NERD_tree_5
+-'  22  2  ~/Sites/sandra/NERD_tree_5
+-'  4  3  ~/Sites/sandra/NERD_tree_3
+-'  22  2  ~/Sites/sandra/NERD_tree_3
+-'  1  2  ~/Sites/sandra/NERD_tree_3
+-'  8  0  ~/Sites/sandra/NERD_tree_4
+-'  14  2  ~/Sites/sandra/NERD_tree_4
+-'  1  0  ~/Sites/sandra/NERD_tree_4
+-'  11  0  ~/Sites/sandra/NERD_tree_2
+-'  17  2  ~/Sites/sandra/NERD_tree_2
+-'  1  1  ~/Sites/sandra/NERD_tree_2
+-'  58  2  ~/Sites/sandra/NERD_tree_1
+-'  45  0  ~/.vimrc
+-'  59  0  ~/.vimrc
+-'  44  0  ~/.vimrc
+-'  1  0  ~/.vimrc
+-'  1  0  ~/.vim/plugins.vim
+-'  11  5  ~/NERD_tree_2
+-'  73  2  ~/NERD_tree_2
+-'  1  5  ~/NERD_tree_2
+-'  11  6  ~/.vimrc
+-'  25  1  ~/.vimrc
+-'  30  0  ~/Sites/sandra/NERD_tree_2
+-'  37  2  ~/Sites/sandra/NERD_tree_2
 -'  1  0  ~/Sites/sandra/bootstrap/app.php
--'  14  1  ~/Sites/sandra/NERD_tree_1
--'  30  2  ~/Sites/sandra/NERD_tree_1
--'  1  3  ~/Sites/sandra/NERD_tree_1
--'  1  0  ~/Sites/sandra/package.json
+-'  71  1  ~/Sites/sandra/NERD_tree_1
+-'  87  2  ~/Sites/sandra/NERD_tree_1
 -'  2  0  ~/Sites/sandra/database
+-'  1  4  ~/Sites/sandra/NERD_tree_5
+-'  22  2  ~/Sites/sandra/NERD_tree_5
+-'  4  3  ~/Sites/sandra/NERD_tree_3
+-'  22  2  ~/Sites/sandra/NERD_tree_3
+-'  1  2  ~/Sites/sandra/NERD_tree_3
+-'  8  0  ~/Sites/sandra/NERD_tree_4
+-'  14  2  ~/Sites/sandra/NERD_tree_4
+-'  1  0  ~/Sites/sandra/NERD_tree_4
+-'  1  0  ~/.vim/plugins.vim
+-'  11  5  ~/NERD_tree_2
+-'  73  2  ~/NERD_tree_2
+-'  1  5  ~/NERD_tree_2
+-'  1  0  ~/Sites/sandra/bootstrap/app.php
+-'  2  0  ~/Sites/sandra/database
+-'  1  0  ~/inbjudan2.pages
+-'  1  3  ~/test.php
+-'  1  0  ~/Sites/sandra/app/User.php
+-'  14  2  ~/Sites/sandra/NERD_tree_11
+-'  37  2  ~/Sites/sandra/NERD_tree_11
+-'  1  0  ~/Sites/sandra/NERD_tree_11
+-'  1  0  ~/Sites/sandra
+-'  1  4  ~/Sites/sandra/NERD_tree_5
+-'  22  2  ~/Sites/sandra/NERD_tree_5
+-'  4  3  ~/Sites/sandra/NERD_tree_3
+-'  22  2  ~/Sites/sandra/NERD_tree_3
+-'  1  2  ~/Sites/sandra/NERD_tree_3
+-'  8  0  ~/Sites/sandra/NERD_tree_4
+-'  14  2  ~/Sites/sandra/NERD_tree_4
+-'  1  0  ~/Sites/sandra/NERD_tree_4
+-'  8  0  ~/Sites/sandra/NERD_tree_2
+-'  14  2  ~/Sites/sandra/NERD_tree_2
+-'  2  0  ~/Sites/sandra/NERD_tree_1
+-'  35  2  ~/Sites/sandra/NERD_tree_1
+-'  1  0  ~/.vim/plugins.vim
+-'  11  5  ~/NERD_tree_2
+-'  73  2  ~/NERD_tree_2
+-'  15  21  ~/.vimrc
+-'  2  0  ~/.vimrc
+-'  1  0  ~/Sites/sandra/package.json
+-'  21  0  ~/Sites/sandra/NERD_tree_1
+-'  25  2  ~/Sites/sandra/NERD_tree_1
+-'  1  0  ~/Sites/sandra/NERD_tree_1
+-'  1  0  ~/inbjudan2.pages
+-'  1  3  ~/test.php
+-'  1  0  ~/Sites/sandra/app/User.php
+-'  14  2  ~/Sites/sandra/NERD_tree_11
+-'  37  2  ~/Sites/sandra/NERD_tree_11
+-'  1  0  ~/Sites/sandra/NERD_tree_11
+-'  1  4  ~/Sites/sandra/NERD_tree_5
+-'  22  2  ~/Sites/sandra/NERD_tree_5
+-'  4  3  ~/Sites/sandra/NERD_tree_3
 
 # History of marks within files (newest to oldest):
 
 > ~/Documents/texter/notes_17-09-24.txt
-	"	6	32
-	^	6	33
-	.	6	33
-	+	5	17
-	+	6	33
+	"	1	0
+	^	9	0
+	.	9	0
+	+	6	3
+	+	9	0
+
+> ~/.myscripts/notes
+	"	9	3
+	^	9	4
+	.	9	4
+	+	9	49
+	+	7	17
+	+	1	51
+	+	2	19
+	+	3	1
+	+	4	0
+	+	5	0
+	+	6	0
+	+	9	4
+
+> ~/.myscripts/note
+	"	1	0
+
+> ~/Sites/sandra/NERD_tree_1
+	"	21	0
+	.	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+
+> ~/Sites/sandra/NERD_tree_2
+	"	4	0
+	.	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+
+> ~/Sites/sandra/package.json
+	"	1	0
 
 > ~/.vimrc
-	"	11	19
-	^	11	30
-	.	11	6
-	+	54	36
-	+	31	0
-	+	21	12
-	+	27	0
-	+	27	0
-	+	29	0
-	+	54	0
-	+	27	0
+	"	15	21
+	^	15	22
+	.	15	21
 	+	22	0
 	+	27	33
 	+	27	18
@@ -279,19 +316,19 @@ $
 	+	27	0
 	+	32	0
 	+	7	0
-	+	50	0
-	+	51	0
-	+	51	0
-	+	52	0
-	+	54	0
-	+	51	19
-	+	54	2
-	+	53	9
-	+	56	10
-	+	55	0
-	+	51	0
+	+	58	0
+	+	59	0
+	+	59	0
+	+	60	0
+	+	62	0
+	+	59	19
+	+	62	2
+	+	61	9
+	+	64	10
+	+	63	0
+	+	59	0
 	+	36	0
-	+	46	0
+	+	54	0
 	+	28	0
 	+	6	0
 	+	7	20
@@ -324,7 +361,7 @@ $
 	+	41	21
 	+	44	13
 	+	2	0
-	+	59	0
+	+	67	0
 	+	4	0
 	+	4	0
 	+	2	0
@@ -346,7 +383,7 @@ $
 	+	27	0
 	+	30	0
 	+	31	28
-	+	46	31
+	+	54	31
 	+	24	36
 	+	19	46
 	+	13	51
@@ -357,27 +394,235 @@ $
 	+	19	41
 	+	27	0
 	+	11	6
+	+	45	0
+	+	45	0
+	+	45	0
+	+	46	0
+	+	53	0
+	+	46	26
+	+	50	57
+	+	15	21
 	a	11	0
 
-> ~/Sites/sandra/NERD_tree_1
-	"	2	0
+> ~/Sites/sandra/NERD_tree_11
+	"	14	2
 	.	1	0
+	+	1	0
+	+	1	0
+	+	1	0
 	+	1	0
 	+	1	0
 	+	1	0
 	+	1	0
 	+	1	0
 
-> ~/Sites/sandra/NERD_tree_2
-	"	36	0
+> ~/Sites/sandra/NERD_tree_12
+	"	1	0
 	.	1	0
 	+	1	0
+
+> ~/Sites/sandra/NERD_tree_13
+	"	8	0
+	.	1	0
 	+	1	0
+
+> ~/Sites/sandra/NERD_tree_14
+	"	1	0
+	.	1	0
+	+	1	0
+
+> ~/Sites/sandra/NERD_tree_15
+	"	8	0
+	.	1	0
+	+	1	0
+
+> ~/Sites/sandra/NERD_tree_16
+	"	1	0
+	.	1	0
+	+	1	0
+
+> ~/Sites/sandra/NERD_tree_17
+	"	8	0
+	.	1	0
+	+	1	0
+
+> ~/Sites/sandra/NERD_tree_18
+	"	1	0
+	.	1	0
+	+	1	0
+
+> ~/Sites/sandra/NERD_tree_19
+	"	8	0
+	.	1	0
+	+	1	0
+
+> ~/Sites/sandra/NERD_tree_20
+	"	1	0
+	.	1	0
+	+	1	0
+
+> ~/Sites/sandra/NERD_tree_21
+	"	8	0
+	.	1	0
+	+	1	0
+
+> ~/Sites/sandra/app/User.php
+	"	1	0
+
+> ~/Sites/sandra/ControlP
+	"	2	0
+	.	2	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	2	0
+
+> ~/test.php
+	"	1	3
+
+> ~/inbjudan2.pages
+	"	1	0
 
 > ~/Sites/sandra/NERD_tree_3
+	"	1	0
+	.	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+
+> ~/Sites/sandra/NERD_tree_4
+	"	8	0
+	.	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+
+> ~/Sites/sandra/NERD_tree_5
+	"	1	4
+	.	1	0
+	+	1	0
+	+	1	0
+
+> ~/ControlP
+	"	10	0
+	.	2	0
+	+	11	0
+	+	2	0
+
+> ~/.vim/plugins.vim
+	"	1	0
+	^	10	27
+	.	10	27
+	+	1	0
+	+	8	27
+	+	10	27
+
+> ~/NERD_tree_1
 	"	4	0
 	.	1	0
 	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+
+> ~/NERD_tree_2
+	"	11	5
+	.	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+
+> ~/NERD_tree_3
+	"	1	0
+	.	1	0
 	+	1	0
 
 > ~/Sites/sandra/bootstrap/app.php
@@ -402,11 +647,6 @@ $
 > ~/Sites/sandra/config/auth.php
 	"	37	0
 
-> ~/Sites/sandra/NERD_tree_4
-	"	9	0
-	.	1	0
-	+	1	0
-
 > ~/Sites/sandra/app/Exceptions/Handler.php
 	"	53	0
 
@@ -420,16 +660,6 @@ $
 
 > ~/Sites/sandra/database/migrations/2014_10_12_100000_create_password_resets_table.php
 	"	15	4
-
-> ~/Sites/sandra/package.json
-	"	1	0
-
-> ~/.vim/plugins.vim
-	"	1	0
-	^	8	28
-	.	8	27
-	+	1	0
-	+	8	27
 
 > ~/Sites/sandra/routes/web.php
 	"	1	0
@@ -509,12 +739,6 @@ $
 	+	62	0
 	+	65	0
 	+	66	39
-
-> ~/.myscripts/notes
-	"	6	49
-	^	6	50
-	.	6	49
-	+	6	49
 
 > ~/Documents/texter/notes_17-09-22
 	"	1	0
@@ -1123,51 +1347,3 @@ $
 	+	29	2
 	+	27	3
 	+	30	46
-
-> ~/skall
-	"	1	0
-
-> ~/Documents/Programmering/Javascript/React-playground/Project-zero/my-app/src/App.js
-	"	13	6
-	^	10	37
-	.	12	0
-	+	6	0
-	+	11	0
-	+	12	19
-	+	12	16
-	+	10	36
-	+	12	0
-	j	2	5
-
-> ~/Documents/Programmering/Javascript/React-playground/Project-zero/my-app/src/App.css
-	"	10	22
-	^	10	23
-	.	10	22
-	+	7	11
-	+	9	1
-	+	7	10
-	+	9	0
-	+	7	10
-	+	6	38
-	+	10	22
-
-> ~/Documents/Programmering/Javascript/React-playground/Project-zero/my-app/App.js
-	"	1	0
-
-> ~/Documents/Programmering/Javascript/React-playground/Project-zero/my-app/App.css
-	"	5	0
-	^	5	0
-	.	4	0
-	+	1	8
-	+	6	1
-	+	1	10
-	+	4	0
-
-> /private/etc/apache2/httpd.conf
-	"	3	0
-
-> /usr/share/vim/vim74/doc/sponsor.txt
-	"	216	28
-
-> /usr/share/vim/vim74/doc/help.txt
-	"	100	0

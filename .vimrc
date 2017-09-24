@@ -12,7 +12,7 @@ nmap <C-T> :NERDTreeToggle<CR>
 
 "----------- Visuals ----------------------------------" 
 
-colorscheme atom-dark
+colorscheme jellybeans
 set t_CO=256
 
 
@@ -41,6 +41,14 @@ nmap <C-H> <C-W><C-H>
 
 set splitbelow
 set splitright
+
+
+"----------- Plugins --------------------------------------" 
+"/
+"/ CtrlP
+"/
+let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git'
+
 
 
 "----------- Auto Commands --------------------------------" 
