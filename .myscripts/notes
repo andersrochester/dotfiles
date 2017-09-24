@@ -1,0 +1,10 @@
+# Ett script som automatiskt skapar en anteckning
+# med dagens datum i namnet. 
+# Anders Rochester
+
+        DATE=`date +%y-%m-%d`
+
+        TITLE=~/Documents/texter/'notes'_$DATE.txt
+
+        vim $TITLE
+

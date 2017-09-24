@@ -1,0 +1,11 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =9
+let g:netrw_dirhist_1='/Users/andersrochester/Sites/sandra/app/Exceptions'
+let g:netrw_dirhist_2='/Users/andersrochester/Sites/sandra/app'
+let g:netrw_dirhist_3='/Users/andersrochester/Sites/sandra'
+let g:netrw_dirhist_4='/Users/andersrochester/Sites'
+let g:netrw_dirhist_5='/Users/andersrochester/Sites/sandra'
+let g:netrw_dirhist_6='/Users/andersrochester/Sites/sandra/database'
+let g:netrw_dirhist_7='/Users/andersrochester/Sites/sandra/database/migrations'
+let g:netrw_dirhist_8='/Users/andersrochester/Sites/sandra/database'
+let g:netrw_dirhist_9='/Users/andersrochester/Sites/sandra'

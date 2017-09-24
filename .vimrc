@@ -1,33 +1,59 @@
-"Vim configuration file, sep 2017
-"Author; Anders Rochester
-"-------------------------------------------------"
+set nocompatible              " be iMproved, required
 
+so ~/.vim/plugins.vim
 
-"----------- mapping -----------------------------"
+syntax on
+
+"----------- Mapping ----------------------------------"
 nmap <C-N> :set invnumber<CR> "set number on"
-
-"----  carrige return takes you to EOF
 nmap <CR> G 
 map rr :source ~/.vimrc
+nmap <C-T> :NERDTreeToggle<CR>
 
-"----- shortcut for editing .vimrc, opens in a new tab"
+"----------- Visuals ----------------------------------" 
+
+colorscheme atom-dark
+set t_CO=256
+
+
+"----------- Shortcut for editing .vimrc ---------------"
 nmap ,ev :tabedit $MYVIMRC <cr>
 nmap ,<space>  :nohlsearch<cr>
 		
-"----------- settings ----------------------------" 
+
+"----------- Settings ----------------------------------" 
 set number showmode
 set tabstop=4
-
-"----- set expandtab
-syntax on
 set history=40 
 set backspace=indent,eol,start
 
-"----------- Search ----------------------------" 
+
+"----------- Search -------------------------------------" 
 set hlsearch
 set incsearch
 
-"----------- Auto Commands ----------------------------" 
+
+"----------- Split Management ----------------------------" 
+nmap <C-J> <C-W><C-J>
+nmap <C-L> <C-W><C-L>
+nmap <C-K> <C-W><C-K>
+nmap <C-H> <C-W><C-H>
+
+set splitbelow
+set splitright
+
+
+"----------- Auto Commands --------------------------------" 
 
 "Automatically source the vimrc file on save"
-autocmd BufWritePost .vimrc source % 
+
+augroup autosourcing 
+
+		autocmd!
+		autocmd BufWritePost .vimrc source % 
+
+augroup END
+
+
+
+
